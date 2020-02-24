@@ -8,4 +8,13 @@ import Badge from "./components/Badge";
 
 const container = document.getElementById("app");
 
-ReactDOM.render(<Badge />, container);
+ReactDOM.render(
+  <Badge
+    avatarUrl="https://s3.amazonaws.com/uifaces/faces/twitter/souuf/128.jpg"
+    firstName="Keagan"
+    lastName="Abernathy"
+    jobTitle="International Functionality Planner"
+    twitter="Bradford.Moore89"
+  />,
+  container
+);
