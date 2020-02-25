@@ -1,34 +1,57 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./styles/BadgesList.css";
 
-class BadgesList extends React.Component {
+class BadgesListItem extends React.Component {
   render() {
     return (
-      <ul className="list-unstyled BadgesList">
-        {this.props.badges.map(badge => {
-          return (
-            <li key={badge.id} className="BadgesListItem">
-              <img
-                className="BadgesListItem__avatar"
-                src={badge.avatarUrl}
-                alt="Avatar"
-              />
-              <div className="BadgesListItem__section">
-                <div className="BadgesListItem__section-name">
-                  {badge.firstName} {badge.lastName}
-                </div>
-                <div className="BadgesListItem__section-twitter">
-                  <span className="Twitter__logo"></span>@{badge.twitter}
-                </div>
-                <div className="BadgesListItem__section-jobTitle">
-                  {badge.jobTitle}
-                </div>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="BadgesListItem">
+        <img
+          className="BadgesListItem__avatar"
+          src={this.props.badge.avatarUrl}
+          alt={`${this.props.badge.firstName} ${this.props.badge.lastName}`}
+        />
+
+        <div className="BadgesListItem__section">
+          <strong>
+            {this.props.badge.firstName} {this.props.badge.lastName}
+          </strong>
+          <div className="BadgesListItem__section-twitter">
+            <span className="Twitter__logo"></span>@{this.props.badge.twitter}
+          </div>
+          {this.props.badge.jobTitle}
+        </div>
+      </div>
+    );
+  }
+}
+
+class BadgesList extends React.Component {
+  render() {
+    if (this.props.badges.length === 0) {
+      return (
+        <div>
+          <h3>No badges were found</h3>
+          <Link className="btn btn-primary" to="/badges/new">
+            Create new badge
+          </Link>
+        </div>
+      );
+    }
+
+    return (
+      <div className="BadgesList">
+        <ul className="list-unstyled">
+          {this.props.badges.map(badge => {
+            return (
+              <li key={badge.id}>
+                <BadgesListItem badge={badge} />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     );
   }
 }
