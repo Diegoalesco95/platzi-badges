@@ -1,4 +1,4 @@
-.NotFound {
+.PageError {
   height: 100vh;
   width: 100%;
   padding: 2rem 0;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.Title404 {
-  font-size: 200px;
+.Title505 {
+  font-size: 3rem;
   font-weight: bold;
 }

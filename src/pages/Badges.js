@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import "./styles/Badges.css";
 import confLogo from "../images/badge-header.svg";
 import BadgesList from "../components/BadgesList";
+import PageLoading from "../components/PageLoading";
+import PageError from "../components/PageError";
 import api from "../api";
 
 class Badges extends React.Component {
   constructor(props) {
     super(props);
-    // console.log("1. Constructor");
-
     this.state = {
       loading: true,
       error: null,
@@ -19,7 +19,6 @@ class Badges extends React.Component {
   }
 
   componentDidMount() {
-    // console.log("3. componentDidMount");
     this.fetchData();
   }
 
@@ -34,30 +33,16 @@ class Badges extends React.Component {
     }
   };
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   // console.log("5. componentUpdate()");
-  //   console.log({
-  //     prevProps: prevProps,
-  //     prevState: prevState
-  //   });
-  //   console.log({
-  //     props: this.props,
-  //     state: this.state
-  //   });
-  // }
-
   componentWillUnmount() {
-    // console.log("6.componentWillUnmount()");
     clearTimeout(this.timeoutId);
   }
 
   render() {
-    // console.log("2/4. render");
     if (this.state.loading === true) {
-      return "Loading ...";
+      return <PageLoading />;
     }
     if (this.state.error) {
-      return `Error: ${this.state.error.message}`;
+      return <PageError error={this.state.error} />;
     }
 
     return (
