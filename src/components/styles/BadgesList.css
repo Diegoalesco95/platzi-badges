@@ -18,11 +18,15 @@
   height: 80px;
 }
 
-.BadgeListItem__section-name {
+.BadgesListItem__section {
+  margin-left: 0.5rem;
+}
+
+.BadgesListItem__section-name {
   font-weight: bold;
 }
 
-.BadgeListItem__section-twitter {
+.BadgesListItem__section-twitter {
   color: #1da1f2;
 }
 

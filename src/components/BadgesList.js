@@ -13,14 +13,14 @@ class BadgesList extends React.Component {
                 src={badge.avatarUrl}
                 alt="Avatar"
               />
-              <div className="BadgeListItem__section">
-                <div className="BadgeListItem__section-name">
+              <div className="BadgesListItem__section">
+                <div className="BadgesListItem__section-name">
                   {badge.firstName} {badge.lastName}
                 </div>
-                <div className="BadgeListItem__section-twitter">
+                <div className="BadgesListItem__section-twitter">
                   <span className="Twitter__logo"></span>@{badge.twitter}
                 </div>
-                <div className="BadgeListItem__section-jobTitle">
+                <div className="BadgesListItem__section-jobTitle">
                   {badge.jobTitle}
                 </div>
               </div>
