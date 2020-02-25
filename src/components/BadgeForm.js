@@ -64,11 +64,7 @@ class BadgeForm extends React.Component {
               value={this.props.formValues.twitter}
             />
           </div>
-          <button
-            // type="button"
-            onClick={this.handleClick}
-            className="btn btn-primary"
-          >
+          <button onClick={this.handleClick} className="btn btn-primary">
             Save
           </button>
         </form>

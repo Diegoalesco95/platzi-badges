@@ -1,4 +1,5 @@
-.BadgeNew__hero {
+.NotFound {
+  height: 100vh;
   width: 100%;
   padding: 2rem 0;
   background: url("../../images/stars.svg"), #1b1b25;
@@ -7,4 +8,15 @@
   color: #ffffff;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.NotFound__img {
+  width: 25%;
+  height: 50%;
+}
+
+.Title404 {
+  font-size: 200px;
+  font-weight: bold;
 }
