@@ -9,14 +9,11 @@ import PageError from "../components/PageError";
 import api from "../api";
 
 class Badges extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: true,
-      error: null,
-      data: []
-    };
-  }
+  state = {
+    loading: true,
+    error: null,
+    data: undefined
+  };
 
   componentDidMount() {
     this.fetchData();
@@ -32,10 +29,6 @@ class Badges extends React.Component {
       this.setState({ loading: false, error: error });
     }
   };
-
-  componentWillUnmount() {
-    clearTimeout(this.timeoutId);
-  }
 
   render() {
     if (this.state.loading === true) {
@@ -54,17 +47,14 @@ class Badges extends React.Component {
             </div>
           </div>
         </div>
+
         <div className="Badges__container">
           <div className="Badges__buttons">
             <Link to="/badges/new" className="btn btn-primary">
               New Badge
             </Link>
           </div>
-          <div className="BadgesList">
-            <div className="Badges__container">
-              <BadgesList badges={this.state.data} />
-            </div>
-          </div>
+          <BadgesList badges={this.state.data} />
         </div>
       </React.Fragment>
     );
