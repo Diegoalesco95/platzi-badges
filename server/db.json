@@ -448,6 +448,22 @@
       "jobTitle": "FrontEnd Dev",
       "twitter": "Diegoalesco95",
       "id": "V08pYDL"
+    },
+    {
+      "firstName": "Rachel",
+      "lastName": "Cortes",
+      "email": "Idella_Bechtelar51@gmail.com",
+      "jobTitle": "Manager",
+      "twitter": "Kira_Veum",
+      "id": "ZE6VbVl"
+    },
+    {
+      "firstName": "Snoopy",
+      "lastName": "Kaufman",
+      "email": "snoopy@example.com",
+      "jobTitle": "Super Dog",
+      "twitter": "snoopysuperdog",
+      "id": "Ij4UqaP"
     }
   ]
 }
