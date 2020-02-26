@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 
 import "./styles/BadgeDetails.css";
@@ -46,7 +47,12 @@ function BadgeDetails(props) {
                 </Link>
               </div>
               <div>
+                {/* onClick={this.openModa} */}
                 <button className="btn btn-danger">Delete</button>
+                {ReactDOM.createPortal(
+                  <h1>Hola</h1>,
+                  document.getElementById("modal")
+                )}
               </div>
             </div>
           </div>
