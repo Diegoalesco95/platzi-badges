@@ -8,11 +8,11 @@ Proyecto de aprendizaje: Platzi badges es un una web para crear badges de los as
 
 ## Lista de badges
 
-![Home](.readme-static/list.png)
+![Home](.readme-static/List.png)
 
 ## Crear un badge
 
-![Home](.readme-static/new.png)
+![Home](.readme-static/New.png)
 
 ## ¿Cómo funciona?
 
