@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import BadgeDetails from "./BadgeDetails";
-import PageLoading from "../components/PageLoading";
-import PageError from "../components/PageError";
-import api from "../api";
+import BadgeDetails from './BadgeDetails';
+import PageLoading from '../components/PageLoading';
+import PageError from '../components/PageError';
+import api from '../api';
 
 class BadgeDetailsContainer extends React.Component {
   state = {
@@ -42,7 +42,7 @@ class BadgeDetailsContainer extends React.Component {
       await api.badges.remove(this.props.match.params.badgeId);
       this.setState({ loading: false });
 
-      this.props.history.push("/badges");
+      this.props.history.push('/badges');
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
